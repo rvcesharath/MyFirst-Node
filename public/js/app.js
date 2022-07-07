@@ -1,10 +1,10 @@
 //console.log('Client side javascript file is loaded!')
 
-fetch('http://puzzle.mead.io/puzzle').then((response) => {
-    response.json().then((data) => {
-        console.log(data)
-    })
-})
+// fetch('http://puzzle.mead.io/puzzle').then((response) => {
+//     response.json().then((data) => {
+//         console.log(data)
+//     })
+// })
 
 // callWeatherAPI(location)
 // {
@@ -32,8 +32,8 @@ const messageTwo = document.querySelector('#message-2');
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
     const location = search.value
-    console.log(location)
-    console.log('tEST')
+   // console.log(location)
+   // console.log('tEST')
     //callWeatherAPI(location)
     fetch('/weather?address='+location).then((response) => {
     response.json().then((data) => {
@@ -42,8 +42,8 @@ weatherForm.addEventListener('submit', (e) => {
         else{
             messageOne.textContent = data.location
             messageTwo.textContent = data.forecast
-            console.log(data.location)
-            console.log(data.forecast)
+           // console.log(data.location)
+            //console.log(data.forecast)
         }
 
     })
